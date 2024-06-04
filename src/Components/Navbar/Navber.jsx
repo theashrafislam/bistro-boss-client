@@ -1,8 +1,51 @@
-const navber = <>
-    <li><a>Item 1</a></li>
-    <li><a>Item 3</a></li>
-</>
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { FaCartPlus } from "react-icons/fa";
+import useCart from "../../Hooks/useCart";
+import useAdmin from "../../Hooks/useAdmin";
+
+
 const Navber = () => {
+    const [cart] = useCart();
+    const { user, signOutUser } = useContext(AuthContext);
+    const [isAdmin] = useAdmin();
+
+    const handleLogOut = () => {
+        signOutUser()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
+    const navber = <>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/menu">Our Menu</Link></li>
+        <li><Link to="/order/salad">Our Shop</Link></li>
+        {
+            //user ? 'true' : 'false'
+            //user ? conditaion ? 'true' : 'false' : 'false'
+        }
+        {
+            user && isAdmin && <li><Link to="/dashboard/admin-home">Dashboard</Link></li>
+        }
+        {
+            user && !isAdmin && <li><Link to="/dashboard/user-home">Dashboard</Link></li>
+        }
+        {
+            user ? <>
+                <Link to="/dashboard/cart" className="btn">
+                    <FaCartPlus className="text-3xl" />
+                    <div className="badge badge-secondary">+{cart.length}</div>
+                </Link>
+                {/* <span>{user?.displayName}</span> */}
+                <button onClick={handleLogOut} className="btn btn-ghost">Sign Out</button>
+            </> : <>
+                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/signup">Sign Up</Link></li>
+            </>
+        }
+
+    </>
     return (
         <>
             <div className="navbar fixed z-10 opacity-40 bg-black text-white max-w-screen-xl">
