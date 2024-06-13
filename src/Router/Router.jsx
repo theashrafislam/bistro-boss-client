@@ -78,7 +78,7 @@ const router = createBrowserRouter([
                 path: 'admin-home',
                 element: <AdminRouter><AdminHome/></AdminRouter>
             },
-            {
+        {
                 path: 'add-items',
                 element: <AdminRouter><AddItem/></AdminRouter>
             },
@@ -89,7 +89,7 @@ const router = createBrowserRouter([
             {
                 path: 'update-item/:id',
                 element: <AdminRouter><UpdateItem/></AdminRouter>,
-                loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+                loader: ({params}) => fetch(`https://bistro-boss-server-pi-ruby.vercel.app/menu/${params.id}`)
             },
             {
                 path: 'manage-items',

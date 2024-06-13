@@ -18,6 +18,8 @@ const Dashboard = () => {
         <div className="flex">
             {/* dashboard side bar */}
             <div className="w-64 min-h-screen bg-[#D1A054]">
+                <h2>Dashboard</h2>
+                <div className="divider"></div>
                 <ul className="menu p-4">
                     {
                         isAdmin ? <>
