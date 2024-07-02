@@ -1,8 +1,38 @@
-# React + Vite
+### Website Name: Bistro Boss
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live site URL:** https://bistro-boss-c3a33.web.app/
 
-Currently, two official plugins are available:
+### Bistro Boss:
+It is based on Node.js/Express.js with MongoDB for data storage, has a RESTful API for CRUD operations, JWT authentication, Stripe integration for payments, middleware like CORS and dotenv, scalability and robust error handling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### **Here are three bullet points features**
+
+* **Secure Payments:** Stripe integration ensures reliable payment processing with detailed invoices.
+
+* **Personalized Dashboard:** Users can track their orders, manage their preferences, and access support through a personalized dashboard.
+  
+* **Secure Login:** A secure login and registration system to manage user access and profiles
+
+### Technologies Used
+
+* **Frontend**: React JS, Tailwind CSS
+* **Backend**: Node.js, Express.js
+* **Database**: MongoDB
+
+### Installation Instructions
+
+* **Node.js:** Ensure Node.js is installed from nodejs.org.
+
+* **Project Dependencies:** Run npm install to install dependencies listed in package.json.
+
+* **Vite:** Install Vite globally if needed.
+
+* **ESLint:** Install ESLint globally if needed.
+
+* **React and React-DOM:** Ensure these are installed.
+
+* **Tailwind CSS:** Ensure Tailwind CSS is installed as a dev dependency.
+
+* **Other Dependencies:** Manually install any missing packages.
+
+**Thank You**
